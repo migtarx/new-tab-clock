@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+  }
+  #clockDiv {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 170px;
+    font-family: monospace;
+  }
+  #welcome-msg{
+    color: white;
+    font-size: 52px;
+    font-family: monospace;
+    text-align: center;
+    margin-top: 57vh;
+  }
