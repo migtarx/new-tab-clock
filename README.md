@@ -9,14 +9,15 @@ Chrome extention that adds a new custom "new-tab" window with a 24 hours clock a
    ```sh
    git clone https://github.com/migtarx/new-tab-clock.git
    ``` 
-   O just download the extention from releases section
-2. Write in url search top bar the following line:
+   O just download the extention from releases section.
+2. Unzip and save the folder in a place where it cannot be deleted (if you delete it, the extention will disappear from your chrome browser).
+3. Write in url search top bar the following line:
     ```sh
    chrome://extensions
    ```
-3. Enable "Developer Mode" by using the switch located in the top right corner
-4. Press in "Load unpacked" button and in the emergent window select the folder where you have the extention (do not delete it, if you do, the extention will disappear)
-5. Done!
+4. Enable "Developer Mode" by using the switch located in the top right corner.
+5. Press in "Load unpacked" button and in the emergent window select the folder where you have the extention folder saved.
+6. Done!
 
 ## Usage
 
