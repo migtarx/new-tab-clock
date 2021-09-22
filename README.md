@@ -7,8 +7,10 @@ Chrome extention that adds a new custom "new-tab" window with a 24 hours clock a
 ## Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/migtarx/minecraft-auto-overviewer.git
+   git clone https://github.com/migtarx/new-tab-clock.git
    ```
+   1.1 
+     O just download the extention from releases section
 2. Write in url search top bar the following line:
     ```sh
    chrome://extensions
