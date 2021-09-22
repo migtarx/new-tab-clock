@@ -35,8 +35,9 @@ Go to config.json file and add into the "name" property field your name as it's 
 And done! You have your "new-tab" chrome extention ready for your daily uses!
 
 ## TODO
-* Add support to other browsers
-* Add configurable option for showing seconds in the clock
+* Add support to other browsers.
+* Add configurable option for showing seconds in the clock.
+* Optimize JS fetch code for reading the config.json file.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
