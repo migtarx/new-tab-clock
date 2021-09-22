@@ -6,11 +6,9 @@ function getClockTime() {
 
     let hr = date.getHours();
     let min = date.getMinutes();
-    //let sec = date.getSeconds(); //Uncomment for adding secs to the clock
 
     hr = ("0" + hr).slice(-2);
     min = ("0" + min).slice(-2);
-    //sec = ("0" + sec).slice(-2); //Uncomment for adding secs to the clock
 
     function getDayZone() {
         if (hr < 12) {
