@@ -11,5 +11,5 @@ Chrome extention that adds a new custom "new-tab" window with a 24 hours clock
    ```
 2. Enter to chrome extentions manager
     ```sh
-   chrome://extentions
+   chrome://extensions
    ```
