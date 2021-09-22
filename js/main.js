@@ -28,7 +28,7 @@ function getClockTime() {
         return response.json();
     }
 
-    clockEl.innerHTML = `${hr}:${min}`; //replace with `${hr}:${min}:${sec}` for adding seconds to teh clock
+    clockEl.innerHTML = `${hr}:${min}`;
     postData("../config.json", {
         answer: 42
     })
