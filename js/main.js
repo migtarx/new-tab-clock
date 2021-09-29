@@ -1,5 +1,6 @@
 let clockEl = document.getElementById("clockDiv");
 let msg = document.getElementById("welcome-msg");
+checkFirstTime()
 
 function getClockTime() {
     let date = new Date();
@@ -20,20 +21,16 @@ function getClockTime() {
         }
     }
 
-    async function postData(url = '', data = {}) {
-        const response = await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(data)
-        });
-        return response.json();
-    }
-
     clockEl.innerHTML = `${hr}:${min}`;
-    postData("../config.json", {
-        answer: 42
-    })
-    .then(data => {
-        msg.innerHTML = `Good ${getDayZone()} ${data.name}`
-    });
+    msg.innerHTML = `Good ${getDayZone()} ${localStorage.getItem("username")} ${localStorage.getItem("lang")}`
 }
+function checkFirstTime(){
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("username") === null) {
+            location.href = 'name.html';
+        }
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+      }
+    }
 setInterval(getClockTime, 0);
