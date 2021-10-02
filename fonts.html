@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="img/icon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New tab</title>
+    <link rel="stylesheet" href="css/slide.css">
+</head>
+<body>
+    <h1 style="color: white; text-align: center; margin-top: 10vh; font-family: monospace;">Select your prefered font</h1>
+    <div id="pick-font">
+        <div class="slideshow-container" style="margin-top: 10%; max-height: 200px;">
+
+            <div class="mySlides" style="font-family: monospace;">
+              <h1 style="font-size: 40px;">Good Morning</h1>
+            </div>
+            
+            <div class="mySlides" style="font-family: Arial;">
+                <h1 style="font-size: 40px;">Good Morning</h1>
+            </div>
+            
+            <div class="mySlides">
+              <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+              <p class="author">- Thomas A. Edison</p>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <div style="text-align: center; margin-top: 5vh">
+                <a class="btn btn-white center"id="confirmFont">Select</a>
+            </div>  
+    </div>
+    <script src="js/slide.js"></script>
+  </body>
+</html>
