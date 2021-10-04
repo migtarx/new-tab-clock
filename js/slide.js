@@ -1,3 +1,15 @@
+const exMsg = ["Buenos dias", "Egun on", "Good Morning"]
+const setUpMsg = ["Seleccione su fuente preferida", "Aukeratu letra-tipo hobetsia", "Select your prefered font"]
+
+document.getElementById("su-msg").innerHTML = setUpMsg[localStorage.getItem("lang")];
+var elems = document.querySelectorAll('h1');
+if (elems.length) { 
+  for(var i=1; i<elems.length; i++){
+    elems[i].innerHTML = exMsg[localStorage.getItem("lang")];;
+  }
+}
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 

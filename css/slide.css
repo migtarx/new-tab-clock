@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: metropolis-semi-bold;
+    src: url(../fonts/metropolis.semi-bold.otf);
+}
 body {
     font-family: Verdana, sans-serif;
      margin:0;
