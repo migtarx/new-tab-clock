@@ -28,9 +28,7 @@ First time of usage the extention will redirect you to a walkthrough menu where 
 You wil be also able to reconfigurate the previous configured parameters by clicking on the bottom left text.
 
 ## TODO
-* Add support to other browsers.
 * Add configurable option for showing seconds in the clock.
-* Optimize JS fetch code for reading the config.json file.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
