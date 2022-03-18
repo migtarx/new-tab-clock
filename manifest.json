@@ -4,7 +4,7 @@
     "version": "1",
     "incognito": "split",
     "chrome_url_overrides": {
-      "newtab": "new-tab.html"
+      "newtab": "index.html"
     },
     "manifest_version": 2
   }

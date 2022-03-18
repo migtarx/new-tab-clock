@@ -55,7 +55,7 @@ function clickConfirmLang() {
     }, 1000);
   } else {
     localStorage.setItem("lang", selectedLang);
-    location.href = "new-tab.html";
+    location.href = "index.html";
   }
 }
 var element = document.getElementById("confirmLang");

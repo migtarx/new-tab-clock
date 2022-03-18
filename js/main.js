@@ -1,3 +1,4 @@
+const langData = [['Buenos días','Buenas tardes','Buenas noches'],['Egun on','Arratsalde on','Gau on'],['Good morning','Good afternoon','Good evening']]
 let clockEl = document.getElementById("clockDiv");
 let msg = document.getElementById("welcome-msg");
 checkFirstTime()
@@ -13,16 +14,16 @@ function getClockTime() {
 
     function getDayZone() {
         if (hr < 12) {
-            return "morning";
+            return langData[localStorage.getItem("lang")][0];
         } else if (hr < 18) {
-            return "afternoon";
+            return langData[localStorage.getItem("lang")][1];
         } else {
-            return "evening";
+            return langData[localStorage.getItem("lang")][2];
         }
     }
 
     clockEl.innerHTML = `${hr}:${min}`;
-    msg.innerHTML = `Good ${getDayZone()} ${localStorage.getItem("username")} ${localStorage.getItem("lang")}`
+    msg.innerHTML = `${getDayZone()} ${localStorage.getItem("username")}`
 }
 function checkFirstTime(){
     if (typeof(Storage) !== "undefined") {
