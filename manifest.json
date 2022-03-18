@@ -2,7 +2,7 @@
     "name": "My custom new tab page",
     "description": "Overrides the new tab page",
     "version": "1",
-    "incognito": "split",
+    "incognito": "spanning",
     "chrome_url_overrides": {
       "newtab": "index.html"
     },
