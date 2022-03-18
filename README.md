@@ -23,16 +23,9 @@ Chrome extention that adds a new custom "new-tab" window with a 24 hours clock a
 
 ## Usage
 
-This extention at the moment is so simple. The only configurable option is the name.
+First time of usage the extention will redirect you to a walkthrough menu where you will be able to select your name and your language (Spanish, english or basque)
 
-Go to config.json file and add into the "name" property field your name as it's shown bellow
-
-```json
-{
-    "name": "Miguel"
-}
-```
-And done! You have your "new-tab" chrome extention ready for your daily uses!
+You wil be also able to reconfigurate the previous configured parameters by clicking on the bottom left text.
 
 ## TODO
 * Add support to other browsers.
