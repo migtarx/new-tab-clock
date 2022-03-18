@@ -1,39 +1,38 @@
-let clockEl = document.getElementById("clockDiv");
-let msg = document.getElementById("welcome-msg");
+const langData = [['Nueva configuración','Buenos días','Buenas tardes','Buenas noches'],['Konfigurazio berria','Egun on','Arratsalde on','Gau on'],['New Configuration','Good morning','Good afternoon','Good evening']]
+var clockEl = document.getElementById("clockDiv");
+var msg = document.getElementById("welcome-msg");
+checkFirstTime()
+document.getElementById("lowerleft").textContent = langData[localStorage.getItem("lang")][0];
 
 function getClockTime() {
-    let date = new Date();
+    var date = new Date();
 
-    let hr = date.getHours();
-    let min = date.getMinutes();
+    var hr = date.getHours();
+    var min = date.getMinutes();
 
     hr = ("0" + hr).slice(-2);
     min = ("0" + min).slice(-2);
 
     function getDayZone() {
         if (hr < 12) {
-            return "morning";
+            return langData[localStorage.getItem("lang")][1];
         } else if (hr < 18) {
-            return "afternoon";
+            return langData[localStorage.getItem("lang")][2];
         } else {
-            return "evening";
+            return langData[localStorage.getItem("lang")][3];
         }
     }
 
-    async function postData(url = '', data = {}) {
-        const response = await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(data)
-        });
-        return response.json();
-    }
-
     clockEl.innerHTML = `${hr}:${min}`;
-    postData("../config.json", {
-        answer: 42
-    })
-    .then(data => {
-        msg.innerHTML = `Good ${getDayZone()} ${data.name}`
-    });
+    msg.innerHTML = `${getDayZone()} ${localStorage.getItem("username")}`
 }
+function checkFirstTime(){
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("username") === null) {
+            location.href = 'name.html';
+        }
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+      }
+    }
 setInterval(getClockTime, 0);
