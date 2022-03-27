@@ -1,8 +1,7 @@
-const langData = [['Nueva configuración','Buenos días','Buenas tardes','Buenas noches'],['Konfigurazio berria','Egun on','Arratsalde on','Gau on'],['New Configuration','Good morning','Good afternoon','Good evening']]
+const langData = [['Buenos días','Buenas tardes','Buenas noches'],['Egun on','Arratsalde on','Gau on'],['Good morning','Good afternoon','Good evening']]
 var clockEl = document.getElementById("clockDiv");
 var msg = document.getElementById("welcome-msg");
 checkFirstTime()
-document.getElementById("lowerleft").textContent = langData[localStorage.getItem("lang")][0];
 
 function getClockTime() {
     var date = new Date();
@@ -15,11 +14,11 @@ function getClockTime() {
 
     function getDayZone() {
         if (hr < 12) {
-            return langData[localStorage.getItem("lang")][1];
+            return langData[localStorage.getItem("lang")][0];
         } else if (hr < 18) {
-            return langData[localStorage.getItem("lang")][2];
+            return langData[localStorage.getItem("lang")][1];
         } else {
-            return langData[localStorage.getItem("lang")][3];
+            return langData[localStorage.getItem("lang")][2];
         }
     }
 
